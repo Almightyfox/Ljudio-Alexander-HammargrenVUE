@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Karantina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital@0;1&display=swap');
+/* font-family: 'Karantina', cursive; */
+/* font-family: 'Prompt', sans-serif; */
+
+body{
+    padding:2vh;
+    padding-bottom: 20vh;
+    background:#415264;
+}
+
+button{
+    background-color: #26313d;
+    border:none;
+    color:white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/*app vue*/
+#app {
+    font-family: 'Prompt', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* text-align: center; */
+    color: #ffffff;
+    font-size: 24px;
+}
+
+#app>div>img{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 40%;
+}
+
+/* 
+#main-menu{
+    background:#597180;
+}
+
+#main-menu>ul>li{
+    display: inline-block;
+    list-style: none;
+    margin: 0.1em;
+    font-size: 42px;
+    padding-right: 20px;
+}
+
+#main-menu>ul>li>a{
+    color: #f9fcff;
+} */
+
+/* Search vue*/
+#mainDiv>.search-div>label{
+    display:flex;
+    justify-content: center;
+}
+
+#list-Songs>div>li{
+    background:#5d8791;
+    list-style-type: none;
+    display:flex;
+    justify-content: start;
+    padding-left:1.3vw;
+}
+
+#list-Songs>div>li>a{
+    color:white;
+    text-decoration: none;
+}
+
+#music-player{
+    background-color:rgb(46, 46, 46);
+    border-radius: 10px;
+}
+
+#text-top{
+}
+
+
+#text-top>div>p {
+    display:inline-block;
+    padding-left: 2vw;
+}
+
+#audio-player-container{
+    display:flex;
+    justify-content: center;
+    margin-left: 12vw;
+}
+
+/*Artist vue*/
+#text-inArtist{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+#text-inArtist>table{
+   
+}
