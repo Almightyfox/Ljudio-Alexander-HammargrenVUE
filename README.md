@@ -2,8 +2,11 @@
 _MusicPlayer project_
 
 ## Technologies:
--Vue 3 vite
--Visual studio code
+
+```text
+Vue 3 vite
+Visual studio code
+```
 
 ## Project setup
 
