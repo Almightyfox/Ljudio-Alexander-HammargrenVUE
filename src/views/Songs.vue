@@ -1,7 +1,7 @@
 <template>
     <div id="song-view">
-        <h1>{{getSongs.name}}</h1>
-        
+        <h3>{{getSongs.name}}</h3>
+        <img :src="getSongs.thumbnails[1].url" alt="no thumbnail">
     </div>
 </template>
 

@@ -2,16 +2,19 @@
     <div id="mainDiv">
         <div class="search-div">
                 <label for="">Bring in some music!</label>
+            <div>
                 <input @keyup.enter="getSearch(searchObject), resetText()" class="searchbar" type="text" placeholder="Search for songs, artist or albums...."
-                 v-model="searchObject.searchString" required>
+                 v-model="searchObject.searchString" @keyup="getSearch(searchObject)" required>
                 <select v-model="searchObject.searchType">
                     <option :value="'search'">All</option>
                     <option :value="'songs'">Song</option>
                     <option :value="'album'">Album</option>
                     <option :value="'artists'">Artist</option>
                 </select>
-                <button @click="getSearch(searchObject)">Search</button>
+                <!-- <button @click="getSearch(searchObject)">Search</button> -->
+            </div>
         </div>
+        <hr>
         <!-- list of the songs or artist searched -->
         <div id="list-Songs" v-for="(songs, videoId) in getMusicYt" :key="videoId">
             <!-- songs -->
@@ -19,7 +22,7 @@
                 <li>
                     <img :src="songs.thumbnails[1].url" alt="no thumbnail">
                     <span>
-                        <p @click="getMusic(songs)">Artist: {{songs.artist.name}}, Song: {{songs.name}}</p>
+                        <p @click="getMusic(songs), resetText()">Artist: {{songs.artist.name}}, Song: {{songs.name}}</p>
                         <button @click="goToSong(songs.videoId)">share</button>
                     </span>
                 </li>
@@ -29,7 +32,7 @@
                 <li>
                     <img :src="songs.thumbnails[1].url" alt="no thumbnail">
                     <span>
-                        <p @click="goToArtist(songs.browseId)">Artist: {{songs.name}}</p>
+                        <p @click="goToArtist(songs.browseId), resetText()">Artist: {{songs.name}}</p>
                     </span>
                 </li>
             </div>
@@ -39,11 +42,12 @@
                     <img :src="songs.thumbnails[1].url" alt="no thumbnail">
                     <span>
 
-                    <p @click="getAlbum(songs.album)">Album: {{songs.name}}</p>
+                    <p @click="getAlbum(songs.album), resetText()">Album: {{songs.name}}</p>
                     </span>
                 </li>
             </div>
         </div>
+        <hr>
     </div>
 </template>
 
