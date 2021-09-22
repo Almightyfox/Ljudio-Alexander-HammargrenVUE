@@ -33,12 +33,34 @@ button{
     width: 40%;
 }
 
-
 /* Search vue*/
-#mainDiv>.search-div>label{
+#mainDiv>div{
+  
+}
+
+
+#mainDiv>.square-div>label{
     display:flex;
     justify-content: center;
 }
+
+.search-div>input[type=text]{
+  padding: 1.2vh;
+  font-size: 17px;
+  border-radius: 6px;
+  border: 1px solid grey;
+  width: 92%;
+  background: #f1f1f1;
+}
+
+.search-div>select{
+  width: 6%;
+  padding: 1.3vh;
+  border: 1px solid grey;
+  background: #f1f1f1;
+      
+}
+
 
 #list-Songs>div>li{
     background:#5d8791;
@@ -51,6 +73,10 @@ button{
     color:white;
     text-decoration: none;
 }
+#list-Songs>div>li>span>p{
+    margin-left:6px;
+}
+
 
 #list-Songs>div>li>img{
 }
@@ -72,31 +98,66 @@ button{
     text-align:center;
 }
 
-
 /*Artist vue*/
 #artist-view{
     text-align: center;
 }
 #artist-view>img{
     width: 70%;
-    border: 8px solid rgb(255, 244, 244);
+    border: 8px solid #5d8791;
 }
 
-/*Artist vue*/
 #text-inArtist{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
 
-#text-inArtist>.box{
-    box-sizing:border-box;
+#text-inArtist>p{
+    background-color: #5d8791;
+    border-radius: 6px;
+    padding: 6px;
+    text-align:justify;
 }
 
-#text-inArtist>.box>.row{
+#text-inArtist>.column{
     display:flex;
+    justify-content:center;
 }
 
-#text-inArtist>.box>.row>.column{
-    flex:50%
+#list{
+    text-align: start;
+}
 
+#list>td{
+    padding-left:4vw;
+}
+
+@media (max-width:1600px){
+    .search-div>input[type=text]{
+        width: 92%;
+    }
+}
+
+@media (max-width:1200px){
+    .search-div>input[type=text]{
+        width: 91%;
+    }
+}
+
+@media (max-width:815px){
+    .search-div>input[type=text]{
+        width: 87%;
+    }
+}
+
+@media (max-width:450px){
+    .search-div>input[type=text]{
+        width: 80%;
+    }
+    #list-Songs{
+    }
+    #list-Songs>div>li>img{
+        width:30%;
+    }
+    
 }

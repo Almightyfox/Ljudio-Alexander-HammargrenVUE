@@ -1,8 +1,8 @@
 <template>
     <div id="mainDiv">
-        <div class="search-div">
+        <div class="square-div">
                 <label for="">Bring in some music!</label>
-            <div>
+            <div class="search-div">
                 <input @keyup.enter="getSearch(searchObject), resetText()" class="searchbar" type="text" placeholder="Search for songs, artist or albums...."
                  v-model="searchObject.searchString" @keyup="getSearch(searchObject)" required>
                 <select v-model="searchObject.searchType">
@@ -97,28 +97,10 @@ export default{
 
 
 <style scoped>
-
-input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  width: 80%;
-  background: #f1f1f1;
-}
-
-input, select{
-  width: 10%;
-  padding: 1.3vh;
-  border: 1px solid grey;
-  background: #f1f1f1;
-}
-
-
 div {
   border-radius: 6px;
   background-color: #597180;
   padding: 0.4vh;
 }
-
 </style>
 
