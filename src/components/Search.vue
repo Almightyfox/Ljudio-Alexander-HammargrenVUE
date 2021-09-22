@@ -14,7 +14,6 @@
                 <!-- <button @click="getSearch(searchObject)">Search</button> -->
             </div>
         </div>
-        <hr>
         <!-- list of the songs or artist searched -->
         <div id="list-Songs" v-for="(songs, videoId) in getMusicYt" :key="videoId">
             <!-- songs -->
@@ -47,7 +46,6 @@
                 </li>
             </div>
         </div>
-        <hr>
     </div>
 </template>
 
@@ -61,8 +59,6 @@ export default{
                 searchString:"",
                 searchType: "search"
             }
-            // ifSearched: false,
-            // searchValue: "All",
         }
     },
 
@@ -101,16 +97,6 @@ export default{
 
 
 <style scoped>
-/* 
-input[type=text], select {
-  width: 25%;
-  padding: 6px 10px;
-  margin: 1vh 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-} */
 
 input[type=text] {
   padding: 10px;
@@ -132,10 +118,6 @@ div {
   border-radius: 6px;
   background-color: #597180;
   padding: 0.4vh;
-}
-
-button{
-    margin-top: 1vh;
 }
 
 </style>

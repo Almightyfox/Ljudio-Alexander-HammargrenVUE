@@ -3,23 +3,30 @@
         <h2>{{getArtist.name}}</h2>
         <img :src="getArtist.thumbnails[1].url" alt="no thumbnail">
         <div id="text-inArtist">
+            <h3>Details</h3>
             <p>{{getArtist.description}}</p>
-            <table v-for="song in getArtist.products.songs.content" :key="song">
-                <tr>
-                    <p>Song</p>
-                </tr>
-                <tr>
-                    <td>{{song.name}}</td>
-                </tr>
-            </table>
-            <table v-for="album in getArtist.products.albums.content" :key="album">
-                <tr>
-                    <p>Albums</p>
-                </tr>
-                <tr>
-                    <td>{{album.name}}</td>
-                </tr>
-            </table>
+            <div class="box">
+                <div class="row">
+                    <div class="column">
+                        <table v-for="song in getArtist.products.songs.content" :key="song">
+                            <tr>
+                                <th>Song</th>
+                            </tr>
+                            <tr>
+                                <td>{{song.name}}</td>
+                            </tr>
+                        </table>
+                        <table v-for="album in getArtist.products.albums.content" :key="album">
+                            <tr>
+                                <th>Albums</th>
+                            </tr>
+                            <tr>
+                                <td>{{album.name}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>

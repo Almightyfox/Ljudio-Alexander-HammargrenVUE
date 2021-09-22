@@ -1,29 +1,29 @@
 <template>
 <div id="music-player">
-  <div id="text-top">
-    <div>
-      <h4>MusicPlayer!</h4>
+    <div class="text-top">
+      <h4>MusicPlayer</h4>
       <p> Playing: {{getInfoSong.name}}</p>
       <p> By: {{getInfoSong.artist.name}} </p>
-    </div>
-    <div id="audio-player-container">
-      <button @click="backwards(currentSong)" class="fas fa-step-backward"></button>
-      <button @click="play(getSong)" class="fas fa-play"></button>
-      <button @click="pause()" class="fas fa-pause"></button>
-      <button  @click="forward(currentSong)" class="fas fa-step-forward"></button>
-        <output id="volume-output" class="volume"/>
-        <input @click="volume(inputRange)" type="range" min="0" max="100" v-model="inputRange" id="volumeslider">
-        <span><i class="fas fa-volume-up"></i></span>
-    </div>
-        <div class="progress-area">
-        <div class="progress-bar">
-        </div>
-        <div class="song-timer">
-          <span class="current-time">0:00</span>
-          <span class="max-duration">0:00</span>
+      <div id="audio-player-container">
+        <button @click="backwards(currentSong)" class="fas fa-step-backward"></button>
+        <button @click="play(getSong)" class="fas fa-play"></button>
+        <button @click="pause()" class="fas fa-pause"></button>
+        <button  @click="forward(currentSong)" class="fas fa-step-forward"></button>
+        <div>
+          <output id="volume-output" class="volume"/>
+          <input @click="volume(inputRange)" type="range" min="0" max="100" v-model="inputRange" id="volumeslider">
+          <span><i class="fas fa-volume-up"></i></span>
         </div>
       </div>
-  </div>
+          <div class="progress-area">
+          <div class="progress-bar">
+          </div>
+          <div class="song-timer">
+            <span class="current-time">0:00</span>
+            <span class="max-duration">0:00</span>
+          </div>
+        </div>
+      </div>
 </div>
 
 </template>

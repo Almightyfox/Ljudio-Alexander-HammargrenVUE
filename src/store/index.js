@@ -80,14 +80,14 @@ const store = createStore({
             commit('setAlbumInfo', result);
         },
 
-        //load multiple songs
+        //fetch multiple songs
         async fetchYoutubeSongApi({commit}, vidId){
             let response = await fetch(`https://yt-music-api.herokuapp.com/api/yt/songs/${vidId}`);
             let result = await response.json();
             commit('setSongInfo', result);
         },
 
-        //load one song
+        //fetch one song
         async fetchOneSong({commit}, vidId){
             let response = await fetch(`https://yt-music-api.herokuapp.com/api/yt/songs/${vidId}`);
             let result = await response.json();
