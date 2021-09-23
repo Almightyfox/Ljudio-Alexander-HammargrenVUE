@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- <Navbar/> -->
-    <img @click="goHome()" alt="Vue logo" src="./assets/LjudioLogo3.png"/>
+    <img @click="goHome()" alt="Vue logo" src="./assets/LjudioLogo3hq.png"/>
     <router-view></router-view>
     <MusicPlayer/>
     <Footer/>

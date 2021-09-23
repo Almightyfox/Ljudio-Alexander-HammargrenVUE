@@ -44,6 +44,8 @@ button{
     width: 40%;
 }
 
+/*Navbar*/
+
 /* Search vue*/
 #mainDiv>.square-div>label{
     display:flex;
@@ -102,7 +104,6 @@ button{
 }
 
 
-
 /*Songs*/
 #song-view{
     text-align:center;
@@ -111,6 +112,7 @@ button{
 
 #song-view>img{
  height:70%;
+ border: 8px solid #5d8791;
 }
 
 
@@ -133,6 +135,8 @@ button{
     border-radius: 6px;
     padding: 6px;
     text-align:justify;
+    margin-left:1vw;
+    margin-right:1vw;
 }
 
 #text-inArtist>.column{
