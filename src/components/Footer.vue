@@ -8,16 +8,6 @@
 
 <style scoped>
     
-    /* .footer{
-        display: flex;
-        flex-direction: column;
-        background-color:rgb(47, 60, 73);
-        position: fixed;
-        bottom: 0;
-        height: 4vh;
-        width: 100%;
-        text-align: center;
-    }  */
      .footer{
         position: fixed;
         left: 0;
@@ -28,8 +18,5 @@
         text-align:center;
         font-size: 16px;
     } 
-    /* .footer>p{
-        display:flex;
-        justify-content: center;
-    } * */
+ 
 </style>

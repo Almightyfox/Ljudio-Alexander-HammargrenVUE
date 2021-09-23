@@ -101,6 +101,8 @@ button{
     align-items: center;
 }
 
+
+
 /*Songs*/
 #song-view{
     text-align:center;
@@ -110,6 +112,7 @@ button{
 #song-view>img{
  height:70%;
 }
+
 
 /*Artist vue*/
 #artist-view{
@@ -133,17 +136,30 @@ button{
 }
 
 #text-inArtist>.column{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-top:1vh;
+    padding-bottom:1vh;
+}
+#artist-Title{
+    padding-top:1vh;
+    padding-bottom: 1vh;
+}
+
+#songList{
+    margin-left:15vw;
+}
+#artistList{
+    margin-left:12vw;
+}
+#list>p{
     display:flex;
-    justify-content:center;
+    text-align:left;
+    padding-left:6vw;
+    padding-right:10vw;
 }
 
-#list{
-    text-align: start;
-}
-
-#list>td{
-    padding-left:4vw;
-}
 
 @media (max-width:1600px){
     .search-div>input[type=text]{
@@ -167,5 +183,15 @@ button{
     .search-div>input[type=text]{
         width: 80%;
     }
-  
+    #list>p{
+        padding-left:0;
+        padding-right:0;
+    }
+    #songList{
+        margin-left:10vw;
+    }
+    #artistList{
+        margin-left: 2vw;
+    }
+
 }

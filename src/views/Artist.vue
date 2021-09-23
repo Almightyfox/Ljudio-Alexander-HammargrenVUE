@@ -6,22 +6,18 @@
       <h3>Details</h3>
       <p>{{ getArtist.description }}</p>
       <div class="column">
-        <table>
-          <tr>
-            <th>Song</th>
-          </tr>
-          <tr id="list" v-for="song in getArtist.products.songs.content" :key="song">
-            <td>{{ song.name }}</td>
-          </tr>
-        </table>
-        <table>
-          <tr>
-            <th>Albums</th>
-          </tr>
-          <tr id="list" v-for="album in getArtist.products.albums.content" :key="album">
-            <td>{{ album.name }}</td>
-          </tr>
-        </table>
+        <div>
+          <p id="artist-Title">Songs</p>
+          <div id="list" v-for="song in getArtist.products.songs.content" :key="song">
+            <p id="songList">{{ song.name }}</p>
+          </div>
+        </div>
+        <div>
+          <p id="artist-Title">Albums</p>
+          <div id="list" v-for="album in getArtist.products.albums.content" :key="album">
+            <p id="artistList">{{ album.name }}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
