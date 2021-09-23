@@ -15,12 +15,12 @@
           <span><i class="fas fa-volume-up"></i></span>
         </div>
       </div>
-          <div class="progress-area">
-          <div class="progress-bar">
-          </div>
           <div class="song-timer">
             <span class="current-time">0:00</span>
             <span class="max-duration">0:00</span>
+          </div>
+          <div class="progress-area">
+          <div class="progress-bar">
           </div>
         </div>
       </div>

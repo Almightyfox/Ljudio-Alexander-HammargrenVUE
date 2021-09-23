@@ -2,7 +2,6 @@
     <div>
         <Search/>
         <SearchResult/>
-        <!-- <MusicPlayer/> -->
     </div>
 </template>
 

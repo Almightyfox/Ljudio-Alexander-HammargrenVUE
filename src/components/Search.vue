@@ -21,7 +21,7 @@
                 <li>
                     <img :src="songs.thumbnails[1].url" alt="no thumbnail">
                     <span>
-                        <p @click="getMusic(songs), resetText()">Artist: {{songs.artist.name}}, Song: {{songs.name}}</p>
+                        <p @click="getMusic(songs), resetText()" id="goToSongB">Artist: {{songs.artist.name}}, Song: {{songs.name}}</p>
                         <button @click="goToSong(songs.videoId)">share</button>
                     </span>
                 </li>

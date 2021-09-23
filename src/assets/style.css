@@ -3,9 +3,20 @@
 /* font-family: 'Karantina', cursive; */
 /* font-family: 'Prompt', sans-serif; */
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
 body{
-    padding-bottom: 20vh;
     background:#415264;
+}
+
+body>div>div{
+    display: flex;
+    flex-direction: column;
+    height: 96vh;
 }
 
 button{
@@ -77,15 +88,15 @@ button{
     margin-left:6px;
 }
 
-
-#list-Songs>div>li>img{
+#goToSongB{
+    padding-top: 3.6vh;
 }
 
 
 /*MusicPlayer*/
 #music-player{
     background-color:rgb(46, 46, 46);
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
 #music-player{
@@ -96,6 +107,11 @@ button{
 /*Songs*/
 #song-view{
     text-align:center;
+    flex-grow:1;
+}
+
+#song-view>img{
+ height:70%;
 }
 
 /*Artist vue*/
@@ -154,10 +170,5 @@ button{
     .search-div>input[type=text]{
         width: 80%;
     }
-    #list-Songs{
-    }
-    #list-Songs>div>li>img{
-        width:30%;
-    }
-    
+  
 }
