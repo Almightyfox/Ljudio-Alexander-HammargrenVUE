@@ -31,7 +31,7 @@
                 <li>
                     <img :src="songs.thumbnails[1].url" alt="no thumbnail">
                     <span>
-                        <p @click="goToArtist(songs.browseId), resetText()">Artist: {{songs.name}}</p>
+                        <p @click="goToArtist(songs.browseId), resetText()" id="artist-p">Artist: {{songs.name}}</p>
                     </span>
                 </li>
             </div>

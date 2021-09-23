@@ -16,7 +16,7 @@ body{
 body>div>div{
     display: flex;
     flex-direction: column;
-    height: 96vh;
+    height: 100vh;
 }
 
 button{
@@ -45,11 +45,6 @@ button{
 }
 
 /* Search vue*/
-#mainDiv>div{
-  
-}
-
-
 #mainDiv>.square-div>label{
     display:flex;
     justify-content: center;
@@ -69,9 +64,7 @@ button{
   padding: 1.3vh;
   border: 1px solid grey;
   background: #f1f1f1;
-      
 }
-
 
 #list-Songs>div>li{
     background:#5d8791;
@@ -86,6 +79,10 @@ button{
 }
 #list-Songs>div>li>span>p{
     margin-left:6px;
+}
+
+#artist-p{
+    padding-top:5vh;
 }
 
 #goToSongB{
