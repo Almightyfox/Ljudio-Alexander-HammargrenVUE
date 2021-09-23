@@ -1,5 +1,4 @@
 <template>
-
     <div class="footer">
         <p>&copy;Alexander Hammargren</p>
         <p>Made using Vue</p>

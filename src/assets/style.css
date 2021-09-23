@@ -45,6 +45,22 @@ button{
 }
 
 /*Navbar*/
+#toolbar{
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#toolbar>.nav-menu{
+    display:flex;
+    justify-content: flex-start;
+    list-style-type:none;
+    color:white;
+    padding-left:2vw;
+}
+
+#toolbar>.nav-menu>li>p{
+    padding-right:1vw;
+}
 
 /* Search vue*/
 #mainDiv>.square-div>label{

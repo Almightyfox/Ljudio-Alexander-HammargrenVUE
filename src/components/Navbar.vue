@@ -2,10 +2,29 @@
     <header>
         <nav id="toolbar">
             <ul class="nav-menu">
-				<li><router-link to="/">Home</router-link></li>
-				<li><router-link to="/about">About</router-link></li>
-                <li><router-link to="/Contact">Contact</router-link></li>
+				<li>
+                    <p @click="goAbout()">About</p>
+                </li>
+                <li>
+                    <p @click="goContact()">Contanct</p>
+                </li>
 			</ul>
         </nav>
     </header>
 </template>
+
+
+<script>
+
+export default{
+  methods: {
+    goAbout(){
+      this.$router.push('/about')
+    },
+    goContact(){
+      this.$router.push('/contact')
+    }
+  }
+}
+</script>
+
