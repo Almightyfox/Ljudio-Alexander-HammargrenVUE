@@ -2,13 +2,13 @@
     <header>
         <nav id="toolbar">
             <ul class="nav-menu">
-				<li>
+				        <li>
                     <p @click="goAbout()">About</p>
                 </li>
                 <li>
                     <p @click="goContact()">Contanct</p>
                 </li>
-			</ul>
+			      </ul>
         </nav>
     </header>
 </template>

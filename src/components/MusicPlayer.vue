@@ -55,10 +55,12 @@ export default {
     play(id){
       player.loadVideoById(id)
       player.playVideo()
+      // this.$store.commit("setPlay", true);
       
     },
     pause(){
       player.pauseVideo()
+      // this.$store.commit("setPlay", false);
     },
     volume(inputRange){
       player.setVolume(inputRange)

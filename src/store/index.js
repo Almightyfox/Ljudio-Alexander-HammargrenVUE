@@ -25,7 +25,8 @@ const store = createStore({
                name: ""
            }
        },
-       currentpath: ""
+       currentpath: "",
+    //    isPlaying:false
    },
 
    mutations:{
@@ -54,6 +55,9 @@ const store = createStore({
     setOneSong(state, song){
         state.song = song.content[0];
     },
+    // setPlay(state,value){
+    //     state.isPlaying = value;
+    // }
 
    },
 
