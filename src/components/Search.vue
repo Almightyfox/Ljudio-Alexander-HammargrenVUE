@@ -97,10 +97,10 @@ export default{
 
 
 <style scoped>
-div {
+/* div {
   border-radius: 6px;
   background-color: #597180;
   padding: 0.4vh;
-}
+} */
 </style>
 

@@ -11,7 +11,7 @@
     import MusicPlayer from '/src/components/MusicPlayer.vue';
 
     export default{
-    
+        name: "Home",
         components: {
             Search,
             SearchResult,
@@ -20,3 +20,8 @@
 
     }
 </script>
+
+
+<style lang="scss" scoped>
+
+</style>

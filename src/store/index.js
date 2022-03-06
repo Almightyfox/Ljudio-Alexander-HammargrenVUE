@@ -68,7 +68,7 @@ const store = createStore({
             let response = await fetch(`https://yt-music-api.herokuapp.com/api/yt/${searchObject.searchType}/${searchObject.searchString}`);
             let searchResult = await response.json();
             commit('setSearchResult', searchResult);
-            console.log(searchResult);
+            // console.log(searchResult);
         },
 
 

@@ -40,7 +40,7 @@ export default {
 </script>
 
 
-<style>
-@import '/src/assets/style.css';
+<style lang="scss" scoped>
+
 
 </style>

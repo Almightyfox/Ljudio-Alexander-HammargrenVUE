@@ -1,4 +1,11 @@
 <template>
+<!-- <div class="music-player">
+  <div class="music-text">
+    <h1></h1>
+  </div>
+</div> -->
+
+
 <div id="music-player">
     <div class="text-top">
       <h4>MusicPlayer</h4>
@@ -104,7 +111,8 @@ export default {
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
 
 .progress-area{
   height: 6px;
