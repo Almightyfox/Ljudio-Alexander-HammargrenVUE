@@ -9,8 +9,8 @@
   </header>
     <nav class="nav">
       <ul>
-        <router-link class="link bottom" :to="{ name: 'about'}">About</router-link>
-        <router-link class="link bottom" :to="{ name: 'contact'}">Contact</router-link>
+        <router-link class="link bottom" :to="{ name: 'about'}"><i class="fa-solid fa-address-card"></i> About</router-link>
+        <router-link class="link bottom" :to="{ name: 'contact'}"><i class="fa-solid fa-message"></i> Contact</router-link>
       </ul>
     </nav>
   </aside>
@@ -41,6 +41,7 @@ export default{
   height: 100vh;
   background: #303030;
   font-size: 0.65em;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
 }
 
 .logo{
@@ -55,25 +56,38 @@ export default{
     padding: 1em 0;
     font-size: 22px;
     color: #fff;
-    transition: .15s linear color;
   }
   
   span{
     font-weight: 700;
-    color: #3678da;
+    color: rgb(145, 145, 145);
     transition: .15s linear color;
 
     &:hover{
-      color: #fd8f00;
+      color: #11b339;
+      transition: .4s ease-in all;
     }
   }
 }
 
 .nav {
   position:relative;
-  padding-left: 30px;
-  top: 10%;
+  padding: 10px;
+  top: 2%;
   font-size: 24px;
+
+  a{
+    display:block;
+
+    &:hover{
+      color:#11b339;
+      transition: .4s ease-in all;
+    }
+  }
+
+  .bottom{
+    padding: 10px 0;
+  }
 }
 
 .musicplayer {
@@ -90,15 +104,4 @@ export default{
     height: 100%;
   }
 }
-
-a{
-  display:block;
-}
-
-.bottom{
-  padding: 10px 0;
-}
-
-
-
 </style>

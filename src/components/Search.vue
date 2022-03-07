@@ -1,21 +1,21 @@
 <template>
-    <div id="mainDiv">
-        <div class="square-div">
+    <div class="main">
+        <div class="banner">
                 <label for="">Bring in some music!</label>
-            <div class="search-div">
-                <input @keyup.enter="getSearch(searchObject), resetText()" class="searchbar" type="text" placeholder="Search for songs, artist or albums...."
-                 v-model="searchObject.searchString" @keyup="getSearch(searchObject)" required>
-                <select v-model="searchObject.searchType">
-                    <option :value="'search'">All</option>
-                    <option :value="'songs'">Song</option>
-                    <option :value="'album'">Album</option>
-                    <option :value="'artists'">Artist</option>
-                </select>
-                <!-- <button @click="getSearch(searchObject)">Search</button> -->
-            </div>
         </div>
+        <div class="search-input">
+            <input @keyup.enter="getSearch(searchObject), resetText()" class="searchbar" type="text" placeholder="Search for songs, artist or albums...."
+             v-model="searchObject.searchString" @keyup="getSearch(searchObject)" required>
+            <select v-model="searchObject.searchType" class="select-style">
+                <option :value="'search'">All</option>
+                <option :value="'songs'">Songs</option>
+                <option :value="'album'">Album</option>
+                <option :value="'artists'">Artist</option>
+             </select>
+             <!-- <button @click="getSearch(searchObject)">Search</button> -->
+         </div>
         <!-- list of the songs or artist searched -->
-        <div id="list-Songs" v-for="(songs, videoId) in getMusicYt" :key="videoId">
+        <div class="song-list" v-for="(songs, videoId) in getMusicYt" :key="videoId">
             <!-- songs -->
             <div v-if="songs.type === 'song'">
                 <li>
@@ -96,11 +96,63 @@ export default{
 </script>
 
 
-<style scoped>
-/* div {
-  border-radius: 6px;
-  background-color: #597180;
-  padding: 0.4vh;
-} */
+<style lang="scss" scoped>
+
+.main{
+    display:block;
+    background-color: #618366;
+
+    .banner{
+        display:flex;
+        align-self: center;
+        justify-content: center;
+        font-size: 36px;
+        font-weight: 500;
+        color:rgb(255, 255, 255);
+    }
+
+    .search-input{
+        display:flex;
+        align-self: center;
+        justify-content: center;
+
+        input{
+            width:30%;
+            min-width:240px;
+            padding: 10px 10px;
+            background-color:#303030;
+            border:none;
+            outline:none;
+            border-radius:1px;
+            color:#fff;
+            cursor: pointer;
+
+        }
+
+        input::placeholder{
+            color:#fff;
+        }
+
+        .select-style{
+            background-color:#303030;
+            color:#fff;
+            width: 10%;
+            max-width:75px;
+            font-size: 16px;
+            border: 1px solid #303030;
+            box-shadow: none;
+            outline:none;
+        }
+    }
+
+    .song-list{
+        display:flex;
+        align-self: center;
+        justify-content: flex-start;
+        list-style:none;
+    }
+
+}
+
 </style>
 
