@@ -18,7 +18,7 @@
         <div class="song-list" v-for="(songs, videoId) in getMusicYt" :key="videoId">
             <!-- songs -->
             <div v-if="songs.type === 'song'" class="song-result">
-                <li @click="getMusic(songs), resetText()" id="goToSongB">
+                <li @click="getMusic(songs), resetText(), scrollToTop()" id="goToSongB">
                     <img :src="songs.thumbnails[1].url" alt="no thumbnail">
                     <p>Artist: {{songs.artist.name}}</p>
                     <p>Song: {{songs.name}}</p>
@@ -77,7 +77,10 @@ export default{
        },
        resetText:function(e){
           this.searchObject.searchString="";
-       }
+       },
+       scrollToTop() {
+            window.scrollTo(0,0);
+        }
 
     
     },

@@ -5,7 +5,7 @@
     <!-- <MusicPlayer/> -->
     <!-- <img @click="goHome()" alt="Vue logo" src="./assets/LjudioLogo3hq.png"/> -->
     <!-- <router-view></router-view> -->
-    <Footer/>
+    <!-- <Footer/> -->
     </div>
   </div>
 </template>

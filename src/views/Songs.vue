@@ -1,7 +1,9 @@
 <template>
-    <div id="song-view">
-        <h3>{{getSongs.name}}</h3>
-        <img :src="getSongs.thumbnails[1].url" alt="no thumbnail">
+    <div class="song-view">
+        <div class="banner">
+            <h1>{{getSongs.name}}</h1>
+            <img :src="getSongs.thumbnails[1].url" alt="no thumbnail">
+        </div>
     </div>
 </template>
 
@@ -41,6 +43,20 @@ export default {
 
 
 <style lang="scss" scoped>
+.song-view{
+    display:flex;
+    align-self:center;
+    justify-content: center;
+    
+    h1{
+        color:#fff;
+        font-size: 42px;
+        font-weight: 200px;
+    }
 
+    img{
+        width:100%;
+    }
+}
 
 </style>
