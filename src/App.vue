@@ -44,6 +44,10 @@ export default {
   font-family: "Quicksand", sans-serif;
 }
 
+html{
+  background-color:#618366;
+}
+
 .app {
   display: flex;
   flex-direction: column;

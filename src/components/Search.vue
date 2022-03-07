@@ -17,32 +17,26 @@
         <!-- list of the songs or artist searched -->
         <div class="song-list" v-for="(songs, videoId) in getMusicYt" :key="videoId">
             <!-- songs -->
-            <div v-if="songs.type === 'song'">
-                <li>
+            <div v-if="songs.type === 'song'" class="song-result">
+                <li @click="getMusic(songs), resetText()" id="goToSongB">
                     <img :src="songs.thumbnails[1].url" alt="no thumbnail">
-                    <span>
-                        <p @click="getMusic(songs), resetText()" id="goToSongB">Artist: {{songs.artist.name}}, Song: {{songs.name}}</p>
-                        <button @click="goToSong(songs.videoId)">share</button>
-                    </span>
+                    <p>Artist: {{songs.artist.name}}</p>
+                    <p>Song: {{songs.name}}</p>
                 </li>
+                    <button @click="goToSong(songs.videoId)">share</button>
             </div>
             <!-- artists -->
-           <div v-if="songs.type === 'artist'">
-                <li>
+           <div v-if="songs.type === 'artist'" class="song-result">
+                <li  @click="goToArtist(songs.browseId), resetText()" id="artist-p">
                     <img :src="songs.thumbnails[1].url" alt="no thumbnail">
-                    <span>
-                        <p @click="goToArtist(songs.browseId), resetText()" id="artist-p">Artist: {{songs.name}}</p>
-                    </span>
+                    <p>Artist: {{songs.name}}</p>
                 </li>
             </div>
             <!-- albums -->
-            <div v-if="songs.type === 'album'">
+            <div v-if="songs.type === 'album'" class="song-result">
                 <li>
                     <img :src="songs.thumbnails[1].url" alt="no thumbnail">
-                    <span>
-
                     <p @click="getAlbum(songs.album), resetText()">Album: {{songs.name}}</p>
-                    </span>
                 </li>
             </div>
         </div>
@@ -150,6 +144,35 @@ export default{
         align-self: center;
         justify-content: flex-start;
         list-style:none;
+        
+
+        .song-result{
+
+            li{
+                display:flex;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 5px 10px;
+
+                p{
+                    padding:10px 25px;
+                    color:#fff;
+                    font-size: 18;
+                    font-weight: 400;
+                }
+
+
+            }
+                button{
+                    margin:5px 13px;
+                    padding:10px 40px;
+                    color:#fff;
+                    background-color:#303030;
+                    border:none;
+                    border-radius: 5px;
+                }
+        }
+
     }
 
 }
